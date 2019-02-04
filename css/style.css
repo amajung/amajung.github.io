@@ -1,0 +1,56 @@
+/*--Header--*/
+h1 {
+  float: left;
+  padding: 13px 0px;
+  padding-left: 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  color: black;
+  overflow: hidden;
+  display: block;
+}
+
+header {
+  position:absolute;
+  left:0; right:0;
+  height: 92px;
+}
+
+/*--Sidenav--*/
+.sidenav {
+  position: absolute;
+  left:0; top:92px; bottom: 0;
+  width: 15%;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+/*--Content--*/
+.main {
+  position: absolute;
+  left:178px; top:92px; right:0; bottom:0;
+}
+
+img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+/*--Footer--*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+}
