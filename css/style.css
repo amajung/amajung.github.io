@@ -243,12 +243,16 @@ footer {
 		padding: 0;
 	}
 
+	#content {
+		grid-template-columns: auto auto;
+	}
+
 	/* Menu is toggled opened */
 	.sidenav.opened #pages {display: block;}
 
 	/* Change layout of about page to repsonsive */
 	.about_content {
-		grid-template-columns: auto;
+		grid-template-columns: auto auto;
 	}
 
 	.bio {
@@ -256,4 +260,12 @@ footer {
 	}
 
   main, footer {margin-left: 0;}
+}
+
+/*--Mobile-*/
+/*Responsive toggle not opened*/
+@media screen and (max-width: 414px) {
+	#content {
+		grid-template-columns: auto;
+	}
 }
