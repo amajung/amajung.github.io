@@ -30,13 +30,7 @@ html, body {
 	font-family: Lato;
 }
 
-/*--Header--*/
-h1 {
-  padding: 13px 0px;
-  padding-left: 30px;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
+h1 { display: none;}
 
 /*--Sidenav--*/
 .sidenav {
@@ -88,7 +82,7 @@ h1 {
 }
 
 button {
-  background-color: #606060; /* Dark grey */
+  background-color: black;
   padding: 15px 32px;
 	margin: 0 5px;
   text-align: center;
@@ -106,12 +100,12 @@ button a {
 
 button:hover {
 	text-decoration: none;
-	background-color: lightgrey;
+	background-color: white;
 	color: black;
 }
 
 #home_content {
-	background-color: #606060;
+	background-color: #000000;
   width: 50%;
   height: 50%;
   position: absolute;
