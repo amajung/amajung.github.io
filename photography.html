@@ -2,48 +2,135 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138714808-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138714808-1');
+    </script>
+
     <meta charset="utf-8">
     <title>Amanda Jung</title>
 
     <!--CSS Sheets-->
+    <!--link rel="stylesheet" href="css/default.css"-->
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!--Text Font & Font Awesome (for icons)-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
     <header>
-      <a class="logo" href="index.html"><h1>AMANDA JUNG</h1></a>
+      <a href="#content" class="skip">Skip to Main Content</a>
     </header>
 
     <!--Side Navigation Bar-->
-    <div class="sidenav">
-      <a href=index.html>Home</a>
-      <a href=photography.html>Photography</a>
-      <a href=blog.html>Blog</a>
-      <a href=about.html>About</a>
-    </div>
+    <nav class="sidenav" id='test_sidenav'>
+      <a href="index.html" id="logo"><img src="images/logo.png"></a>
+      <div id='pages'>
+          <a href=index.html>Home</a>
+          <a class="active" href=photography.html>Photography</a>
+          <a href=thoughts.html>Thoughts</a>
+          <a href=about.html>About</a>
+      </div>
+      <a href="javascript:void(0);" id="icon" onclick="hamburger_menu()"><i class="fa fa-bars"></i></a>
+    </nav>
 
-    <div class="main">
-      <!--Masthead-->
-      <div class="masthead">
-        <h2>Come view the world with me through the lens of the unknown.</h2>
+    <main>
+      <!--Buttons-->
+      <div id="filter_buttons">
+        <button class="btn active" onclick="filterSelection('all')"> All</button>
+        <button class="btn" onclick="filterSelection('thailand')">Thailand</button>
+        <button class="btn" onclick="filterSelection('hongkong')">Hong Kong</button>
+        <button class="btn" onclick="filterSelection('taiwan')">Taiwan</button>
+        <button class="btn" onclick="filterSelection('beijing')">Beijing</button>
       </div>
 
-      <!--Image-->
-      <img src=images/IMG_0377.jpg alt="Image of Honk Kong neon signs">
-      <img src=images/IMG_0726.jpg alt="Image of Sky Bar in Bangkok">
-      <img src=images/IMG_3571.JPG alt="Image of Seattle's Gum Wall">
-      <img src=images/IMG_4491.jpg alt="Image of locks in Thailand's Pattaya Floating Market">
-      <img src=images/IMG_4506.jpg alt="Image of boats on the water in Thailand's Pattaya Floating Market">
-      <img src=images/IMG_4562.jpg alt="Image of women with umbrellas performing on stage">
-      <img src=images/IMG_4594.jpg alt="Image of fresh squeezed fruit drink by food stand in Thailand">
-      <img src=images/IMG_4669.jpg alt="Image of sticky rice with mangos">
-      <img src=images/IMG_4699.jpg alt="Image of woman looking into Pattaya's coast">
-      <img src=images/IMG_4788.jpg alt="Image of Bangkok night skyline">
-      <img src=images/IMG_4821.jpg alt="Image of Bangkok's vehicle and subway traffic">
+      <!--Images-->
+      <!--Thailand -->
+      <div class="row" id="content">
+        <div class="column thailand">
+          <a href="#img1"><img src=images/IMG_4491.jpg alt="Image of locks in Thailand's Pattaya Floating Market"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img1"><img src="images/IMG_4491.jpg" alt="Image of locks in Thailand's Pattaya Floating Market"></a>
 
-      <!--Footer-->
-      <footer>
-        <p>Created by Amanda Jung</p>
-      </footer>
+        <div class="column thailand">
+          <a href='#img2'><img src=images/IMG_4699.jpg alt="Image of woman looking into Pattaya's coast"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img2"><img src="images/IMG_4699.jpg" alt="Image of locks in Thailand's Pattaya Floating Market"></a>
+
+        <div class="column thailand">
+          <a href="#img3"><img src=images/IMG_4788.jpg alt="Image of Bangkok night skyline"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img3"><img src="images/IMG_4788.jpg" alt="Image of locks in Thailand's Pattaya Floating Market"></a>
+
+        <!-- Hong Kong -->
+        <div class="column hongkong">
+          <a href="#img4"><img src=images/IMG_0377.jpg alt="Image of Hong Kong neon signs"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img4"><img src="images/IMG_0377.jpg" alt="Image of Hong Kong neon signs"></a>
+
+        <div class="column hongkong">
+          <a href="#img5"><img src=images/IMG_0271.JPG alt="Image of Hong Kong skyline"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img5"><img src="images/IMG_0271.JPG" alt="Image of Hong Kong skyline"></a>
+
+        <div class="column hongkong">
+          <a href="#img6"><img src=images/IMG_0329.JPG alt="Image of Hong Kong's night skyline"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img6"><img src="images/IMG_0329.JPG" alt="Image of Hong Kong's night skyline"></a>
+
+        <!-- Taiwan-->
+        <div class="column taiwan">
+          <a href="#img7"><img src=images/IMG_9976.JPG alt="Image of Taiwan night market"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img7"><img src="images/IMG_9976.JPG" alt="Image of Taiwan night market"></a>
+
+        <div class="column taiwan">
+          <a href="#img8"><img src=images/IMG_0073.JPG alt="Image of aquarium in Taiwan"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img8"><img src="images/IMG_0073.JPG" alt="Image of aquarium in Taiwan"></a>
+
+        <div class="column taiwan">
+          <a href="#img9"><img src=images/IMG_0100.JPG alt="Image of Kenting Beach"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img9"><img src="images/IMG_0100.JPG" alt="Image of Kenting Beach"></a>
+
+        <!--Beijing-->
+        <div class="column beijing">
+          <a href="#img10"><img src=images/IMG_9642.JPG alt="Image of Temple of Heaven"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img10"><img src="images/IMG_9642.JPG" alt="Image of Temple of Heaven"></a>
+
+        <div class="column beijing">
+          <a href="#img11"><img src='images/IMG_9707.JPG' alt="Image of Beijing's Bird's Nest"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img11"><img src="images/IMG_9707.JPG" alt="Image of Beijing's Bird's Nest"></a>
+
+        <div class="column beijing">
+          <a href="#img12"><img src=images/IMG_9757.JPG alt="Image of Summer Palace"></a>
+        </div>
+        <a href="#_" class="lightbox" id="img12"><img src="images/IMG_9757.JPG" alt="Image of Summer Palace"></a>
+
+      </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <a href="https://www.linkedin.com/in/amajung" aria-label="Learn more about Amanda Jung's professional background."><i class="fab fa-linkedin-in"></i></a>
+    </footer>
+
+    <script src="js/hamburger_menu.js"></script>
+    <script src="js/filtering.js"></script>
 
   </body>

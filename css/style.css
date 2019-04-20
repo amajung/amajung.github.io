@@ -1,56 +1,257 @@
+/*--Skip to Content Button--*/
+a.skip{
+	padding: 10px;
+	text-decoration: none;
+	position: absolute;
+  top: -40px;
+  transition: top ease-in 2s;
+}
+
+a.skip:focus{
+	background: white;
+	top: 5px;
+	border: 1px solid black;
+}
+
+/*--Font--*/
+html, body {
+	font-family: Lato;
+}
+
 /*--Header--*/
 h1 {
-  float: left;
   padding: 13px 0px;
   padding-left: 30px;
   font-size: 20px;
   letter-spacing: 2px;
-  white-space: nowrap;
-  color: black;
-  overflow: hidden;
-  display: block;
-}
-
-header {
-  position:absolute;
-  left:0; right:0;
-  height: 92px;
 }
 
 /*--Sidenav--*/
 .sidenav {
-  position: absolute;
-  left:0; top:92px; bottom: 0;
-  width: 15%;
+	margin: 0;
+	padding: 15px 0;
+ 	width: 200px;
+  background-color: #f1f1f1;
+	position: fixed;
+	height: 100%;
 }
 
 .sidenav a {
-  padding: 6px 6px 6px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+	display: block;
+	text-align: center;
+  color: black;
+  padding: 16px;
+  text-decoration: none; /* Omits underline */
 }
 
-.sidenav a:hover {
-  color: #000000;
+.sidenav a:hover { color: #555; }
+
+.sidenav a.active {
+	background-color: #000000;
+  color: white;
 }
+
+.sidenav #logo {
+	display: block;
+	width: 100px;
+	padding: 10px;
+	margin: auto; /* Centers logo */
+}
+
+.sidenav #pages { display: block; }
+.sidenav #icon { display: none; }
+
 
 /*--Content--*/
-.main {
-  position: absolute;
-  left:178px; top:92px; right:0; bottom:0;
+#welcome_screen {
+	color: white;
+	text-align: center;
+	margin-top: 120px;
+	font-size: 30px;
 }
 
-img {
-  max-width: 50%;
-  max-height: 50%;
+#buttons {
+	text-align: center;
+	margin-top: 60px;
 }
+
+button {
+  background-color: #606060; /* Dark grey */
+  padding: 15px 32px;
+	margin: 0 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+button a {
+	color: white;
+	border: white 1px;
+}
+
+button:hover {
+	text-decoration: none;
+	background-color: lightgrey;
+	color: black;
+}
+
+.btn:active{
+	text-decoration: underline;
+}
+
+#home_content {
+	background-color: #606060;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#main_home { height: 100vh; }
+
+main {
+	position: relative;
+	margin: auto;
+	vertical-align: middle;
+	height: 100%;
+	margin-left: 200px;
+	padding: 1px 16px;
+	padding-top: 10px;
+}
+
+/* PHOTOGRAPHY Content */
+.lightbox {
+	display: none;
+
+/* Apply basic lightbox styling */
+ position: fixed;
+ z-index: 9999;
+ width: 100%;
+ height: 100%;
+ text-align: center;
+ top: 0;left: 0;
+ background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  /* Pad the lightbox image */
+	max-width: 60%;
+  max-height: 80%;
+  margin-top: 5%;
+}
+
+.lightbox:target {
+  /** Show lightbox when it is target */
+  display: block;
+
+  /** Remove default browser outline style */
+  outline: none;
+}
+
+.filter_buttons {	text-align: center; }
+button {
+	color: white;
+	text-decoration: none;
+	border: none;
+}
+
+#filter_buttons { text-align: center; }
+
+#content {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding-top: 10px;
+}
+
+.column {
+	padding: 1%;
+	display: none;
+}
+
+.show {	display: block; }
+
+img { width: 100% }
+
+/* BLOG Content */
+.carousel-inner img {
+  width: 100%;
+  height: 80%;
+}
+
+/* ABOUT Content */
+.about_content {
+	display: grid;
+	grid-template-columns: auto auto;
+	padding: 100px;
+}
+
+.profile, .bio {
+	margin: 15px;
+}
+
+/* Container for flipbox */
+.flipbox {
+  width: 300px;
+  height: 200px;
+}
+
+/* Deals with logistics of transforming each side */
+.flipbox_inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flipbox:hover .flipbox_inner { transform: rotateY(180deg); }
+
+/* Position the front and back side */
+.flipbox_front, .flipbox_back {
+  position: absolute;
+  width: 100%; height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Complete flipping of backside */
+.flipbox_back { transform: rotateY(180deg);}
 
 /*--Footer--*/
 footer {
-  position: fixed;
-  bottom: 0;
-  width:100%;
+	margin-left: 200px;
   text-align: center;
+	height: auto;
+	padding: 20px;
+}
+
+/*--Responsive Layouts--*/
+
+/*--Tablet--*/
+/*Responsive toggle not opened*/
+@media screen and (max-width: 768px) {
+	/* Menu is closed */
+	.sidenav #pages { display: none; }
+  .sidenav #icon {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+  }
+
+	.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+	.sidenav #logo {
+		width: 25px;
+		padding: 0;
+	}
+
+	/* Menu is toggled opened */
+	.sidenav.opened #pages {display: block;}
+
+  main, footer {margin-left: 0;}
 }

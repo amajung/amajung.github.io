@@ -1,0 +1,119 @@
+<!-- images included in this page: IMG_2814.JPG-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Amanda Jung</title>
+
+    <!--CSS Sheets-->
+    <!--link rel="stylesheet" href="css/default.css"-->
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Text Font & Font Awesome (for icons)-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138714808-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138714808-1');
+    </script>
+
+  <body>
+    <header>
+      <a href="#content" class="skip">Skip to Main Content</a>
+    </header>
+
+    <!--Side Navigation Bar-->
+    <nav class="sidenav" id='test_sidenav'>
+      <a href="index.html" id="logo"><img src="images/logo.png"></a>
+      <div id='pages'>
+          <a href=index.html>Home</a>
+          <a href=photography.html>Photography</a>
+          <a class="active" href=thoughts.html>Thoughts</a>
+          <a href=about.html>About</a>
+      </div>
+      <a href="javascript:void(0);" id="icon" onclick="hamburger_menu()"><i class="fa fa-bars"></i></a>
+    </nav>
+
+    <main>
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="images/IMG_3237.JPG" alt="Image of flower shadow in Chicago" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3>Chicago in October</h3>
+            <p>Visiting Chicago has always been a family affair.
+        This past fall, I traveled to Chicago for the first time without my parents/siblings and with one of my closest friends to visit our friends working and living in Chicago.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/IMG_4544.JPG" alt="Image of mountaineous area" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3>The Pacific Northwest in July/August</h3>
+            <p>I had never been to the Pacific Northwest before and had only heard about the drizzling rain in Seattle and high rent in Vancouver through the grapevine. After two weeks traveling around Vancouver, Victoria Island, and Seattle, I fell hard for the Pacific Northwest, its seafood, and beautiful evergreens.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images/IMG_2347.jpg" alt="Image of Taiwan apartment buildings" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3>Taiwan in May</h3>
+            <p>For those that know me, Taiwan is my second home.
+        I've gone more than ten times over the course of my life and stay there for at least a month at a time visitng my extended family and family friends.
+        Come with me on my first trip traveling with a friend internationally and to my family's home of Taiwan.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <a href="https://www.linkedin.com/in/amajung" aria-label="Learn more about Amanda Jung's professional background."><i class="fab fa-linkedin-in"></i></a>
+    </footer>
+
+    <script src="js/hamburger_menu.js"></script>
+
+  </body>
+
+
+</html>

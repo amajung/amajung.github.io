@@ -2,53 +2,81 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138714808-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-138714808-1');
+    </script>
+
     <meta charset="utf-8">
     <title>Amanda Jung</title>
 
     <!--CSS Sheets-->
+    <!--link rel="stylesheet" href="css/default.css"-->
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <!--Text Font & Font Awesome (for icons)-->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
     <header>
-      <a class="logo" href="index.html"><h1>AMANDA JUNG</h1></a>
+      <a href="#content" class="skip">Skip to Main Content</a>
     </header>
 
     <!--Side Navigation Bar-->
-    <div class="sidenav">
-      <a href=index.html>Home</a>
-      <a href=photography.html>Photography</a>
-      <a href=blog.html>Blog</a>
-      <a href=about.html>About</a>
-    </div>
-
-    <div class="main">
-      <!--Masthead-->
-      <div class="masthead">
-        <h2>Hi, my name is Amanda...</h2>
+    <nav class="sidenav" id='test_sidenav'>
+      <a href="index.html" id="logo"><img src="images/logo.png"></a>
+      <div id='pages'>
+          <a href=index.html>Home</a>
+          <a href=photography.html>Photography</a>
+          <a href=thoughts.html>Thoughts</a>
+          <a class="active"  href=about.html>About</a>
       </div>
+      <a href="javascript:void(0);" id="icon" onclick="hamburger_menu()"><i class="fa fa-bars"></i></a>
+    </nav>
 
-      <!--Image-->
-      <img src=images/profile.jpeg alt="profile picture">
+    <main class="about_content">
+      <!--Masthead-->
+      <div class="flipbox">
+        <div class="flipbox_inner">
+
+          <div class="flipbox_front">
+            <div class="profile"><img src=images/profile.jpeg alt="Profile picture of Amanda"></div>
+          </div>
+
+          <div class="flipbox_back">
+            <div class="profile"><img src=images/profile2.jpg alt="Profile picture of Amanda"></div>
+          </div>
+
+        </div>
+      </div>
 
       <!--Purpose-->
-      <div class="purpose">
-        <h2>----------------</h2>
-        <h2>Purpose</h2>
-          Like many other people, I've always had a passion for traveling. I was less than a year old when I took my first international flight. I was traveling to visit my extended family in Taiwan, and I haven't look back since. Over the years, I've had the opportunity to travel to numerous states across the U.S. and countries across the world. As a result, I want to use this digital platform to share my photography and written experiences with other people who also posses the hunger to explore and learn more about the world around them.
+      <div class="bio">
+        <h2>Amanda Jung</h2><br>
+
+        <p>Like many other people, I've always had a passion for traveling. I was less than a year old when I took my first international flight. I was traveling to visit my extended family in Taiwan, and I haven't look back since. Over the years, I've had the opportunity to travel to numerous states across the U.S. and countries across the world. As a result, I want to use this digital platform to share my photography and written experiences with other people who also posses the hunger to explore and learn more about the world around them.</p>
+
+        <p>When I'm not traveling, I am a first year Master's student at the University of Michigan School of Information studying Human-Computer Interaction with a focus on User Exerperience (UX) Design.</p>
       </div>
 
-      <!--Background-->
-      <div class="background">
-        <h2>----------------</h2>
-        <h2>Background</h2>
-          When I'm not traveling, I am a first year Master's student at the University of Michigan School of Information studying Human-Computer Interaction with a focus on User Exerperience (UX) Design.
-      </div>
+    </main>
 
-      <!--Footer-->
-      <footer>
-        <p>Created by Amanda Jung</p>
-      </footer>
+    <!--Footer-->
+    <footer>
+      <a href="https://www.linkedin.com/in/amajung" aria-label="Learn more about Amanda Jung's professional background."><i class="fab fa-linkedin-in"></i></a>
+    </footer>
 
   </body>
 
