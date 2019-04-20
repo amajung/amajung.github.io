@@ -30,13 +30,12 @@
   </head>
 
   <body>
-    <header>
-      <a href="#content" class="skip">Skip to Main Content</a>
-    </header>
+    <!--Skip to Main Content Button-->
+    <a href="#main_content" class="skip">Skip to Main Content</a>
 
     <!--Side Navigation Bar-->
     <nav class="sidenav" id='test_sidenav'>
-      <a href="index.html" id="logo"><img src="images/logo.png"></a>
+      <a href="index.html" id="logo"><img src="images/logo.png" alt="Initials of Amanda Jung"></a>
       <div id='pages'>
           <a href=index.html>Home</a>
           <a class="active" href=photography.html>Photography</a>
@@ -46,7 +45,7 @@
       <a href="javascript:void(0);" id="icon" onclick="hamburger_menu()"><i class="fa fa-bars"></i></a>
     </nav>
 
-    <main>
+    <main id="main_content">
       <!--Buttons-->
       <div id="filter_buttons">
         <button class="btn active" onclick="filterSelection('all')"> All</button>

@@ -1,16 +1,28 @@
 /*--Skip to Content Button--*/
-a.skip{
-	padding: 10px;
-	text-decoration: none;
-	position: absolute;
-  top: -40px;
-  transition: top ease-in 2s;
+a.skip {
+    left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
 }
-
-a.skip:focus{
-	background: white;
-	top: 5px;
-	border: 1px solid black;
+a.skip:focus, a.skip:active {
+    color: #fff;
+    background-color:#000;
+    left: auto;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 205px;
+    padding:5px;
+    border-radius: 15px;
+		border: 2px solid white;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
 }
 
 /*--Font--*/
@@ -84,6 +96,7 @@ button {
   font-size: 16px;
 	cursor: pointer;
 	border-radius: 8px;
+	color: white;
 }
 
 button a {
@@ -97,10 +110,6 @@ button:hover {
 	color: black;
 }
 
-.btn:active{
-	text-decoration: underline;
-}
-
 #home_content {
 	background-color: #606060;
   width: 50%;
@@ -110,7 +119,7 @@ button:hover {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#main_home { height: 100vh; }
+.home_content { height: 100vh; }
 
 main {
 	position: relative;
@@ -136,29 +145,19 @@ main {
  background: rgba(0,0,0,0.8);
 }
 
+/* Padding for lightbox image */
 .lightbox img {
-  /* Pad the lightbox image */
 	max-width: 60%;
   max-height: 80%;
   margin-top: 5%;
 }
 
-.lightbox:target {
-  /** Show lightbox when it is target */
-  display: block;
+/* Shows lightbox when it is target */
+.lightbox:target { display: block; }
 
-  /** Remove default browser outline style */
-  outline: none;
-}
-
-.filter_buttons {	text-align: center; }
-button {
-	color: white;
-	text-decoration: none;
-	border: none;
-}
-
+/* Buttons for filtering photos */
 #filter_buttons { text-align: center; }
+.btn.active{ border: 1px solid black; }
 
 #content {
 	display: grid;
@@ -252,6 +251,15 @@ footer {
 
 	/* Menu is toggled opened */
 	.sidenav.opened #pages {display: block;}
+
+	/* Change layout of about page to repsonsive */
+	.about_content {
+		grid-template-columns: auto;
+	}
+
+	.bio {
+		margin-top: 100px;
+	}
 
   main, footer {margin-left: 0;}
 }

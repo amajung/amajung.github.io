@@ -1,24 +1,15 @@
 /* Function for hamburger menu */
 function hamburger_menu() {
 
+  // Get sidenav element
   var x = document.getElementById("test_sidenav");
-  if (x.className === "sidenav") {
+
+  // Add class opened to sidnav to open menu
+  if (x.className == "sidenav") {
     x.className += " opened";
+  // Otherwise revert back to close menu
   } else {
     x.className = "sidenav";
   }
-
-  /*
-   var page_links = document.getElementById('pages');
-
-  /* When hamburger menu is pressed...
-    If menu is displayed collapse, otherwise expand */
-  /*if ( page_links.style.display == 'block' ) {
-    /* Hides menu */
-  /*  page_links.style.display = 'none';
-  } else {
-    /* Displays menu */
-  /*  page_links.style.display = 'block';
-  } */
 
 }

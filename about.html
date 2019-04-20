@@ -30,23 +30,23 @@
   </head>
 
   <body>
-    <header>
-      <a href="#content" class="skip">Skip to Main Content</a>
-    </header>
+    <!--Skip to Main Content Button-->
+    <a href="#main_content" class="skip">Skip to Main Content</a>
 
     <!--Side Navigation Bar-->
+    <!--Side Navigation Bar-->
     <nav class="sidenav" id='test_sidenav'>
-      <a href="index.html" id="logo"><img src="images/logo.png"></a>
+      <a href="index.html" id="logo"><img src="images/logo.png" alt="Initials of Amanda Jung"></a>
       <div id='pages'>
           <a href=index.html>Home</a>
           <a href=photography.html>Photography</a>
           <a href=thoughts.html>Thoughts</a>
-          <a class="active"  href=about.html>About</a>
+          <a class="active" href=about.html>About</a>
       </div>
       <a href="javascript:void(0);" id="icon" onclick="hamburger_menu()"><i class="fa fa-bars"></i></a>
     </nav>
 
-    <main class="about_content">
+    <main class="about_content" id="main_content">
       <!--Masthead-->
       <div class="flipbox">
         <div class="flipbox_inner">
@@ -78,6 +78,7 @@
       <a href="https://www.linkedin.com/in/amajung" aria-label="Learn more about Amanda Jung's professional background."><i class="fab fa-linkedin-in"></i></a>
     </footer>
 
+    <script src="js/hamburger_menu.js"></script>
   </body>
 
 </html>
